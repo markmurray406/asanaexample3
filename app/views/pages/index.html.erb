@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="offset4">
+
+		<h3>Asana::Add Task</h3>
+		<%= form_tag "/pages/index" do %>
+		<table cellpadding="5" >
+			<tr>
+				<td>Task to add  </td><td><%= text_field_tag "task"  %></td>
+			</tr>
+			<tr>
+				<td>Your API number <a href="http://app.asana.com/-/account_api" target="_blank" >[?]</a></td>
+				<td><%= text_field_tag "api" , params[:api] %></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right" ><%= submit_tag "Add" , :class => "btn btn-primary" %></td>
+			</tr>
+		</table>
+		<% end %>
+		<%= @feedback %>
+	</div>
+</div>
